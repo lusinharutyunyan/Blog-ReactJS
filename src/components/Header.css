@@ -1,0 +1,25 @@
+.headerTxt {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(1, 1, 27);
+  color: white;
+}
+h2{
+    margin-left: 2em;
+    font-size: 28px;
+}
+li {
+    margin-top: 1.5em;
+  list-style-type: none;
+  font-size: 20px;
+
+}
+a li{
+      color: white;
+}
+.post{
+    margin-right: 53em;
+}
+.logOut{
+    margin-right: 10em;
+}
