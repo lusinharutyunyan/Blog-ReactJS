@@ -1,15 +1,17 @@
 import "@fontsource/roboto";
 import "./App.css";
-import Header from "./components/Header";
-import Page from "./components/Page";
+import Home from "./components/Home/Home";
+import LogIn from "./components/LogIn/LogIn";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import Routers from "./constants/Router";
 
 function App() {
-  return (
-    <div className='App'>
-      <Header />
-      <Page />
-    </div>
-  );
+  return <Routers />;
 }
 
 export default App;
