@@ -4,7 +4,6 @@ import ButtonAppBar from "../Home/Header";
 import CreatePost from "./CreatePost";
 
 export default function Story() {
- 
   return (
     <div>
       <ButtonAppBar />

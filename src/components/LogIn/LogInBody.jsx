@@ -7,7 +7,6 @@ import Story from "../Story/Story";
 // import { useState } from "react";
 import { useHistory } from "react-router";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -46,7 +45,7 @@ export default function BasicTextFields() {
             color='primary'
             style={{ width: "500px" }}
             onClick={() => {
-              history.push("../story");
+              history.push("../Posts");
             }}>
             Log In
           </Button>
