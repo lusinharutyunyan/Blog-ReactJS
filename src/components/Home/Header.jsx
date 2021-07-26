@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import HouseIcon from "@material-ui/icons/House";
 import Box from "@material-ui/core/Box";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
+  let history = useHistory();
 
   return (
     <div className={classes.root}>
@@ -36,16 +39,36 @@ export default function ButtonAppBar() {
             color='inherit'
             aria-label='menu'>
             <HouseIcon className={classes.homeIcon} />
-            Blog
+            <Link
+              style={{ color: "white" }}
+              onClick={() => {
+                history.push("/home");
+              }}>
+              Blog
+            </Link>
           </IconButton>
-          <Typography variant='h6' className={classes.title} mr={100}>
-          </Typography>
+          <Typography
+            variant='h6'
+            className={classes.title}
+            mr={100}></Typography>
           <Box mr={130}>
-            <Button color='inherit'>Create Post</Button>
+            <Button
+              color='inherit'
+              onClick={() => {
+                history.push("/LogIn");
+              }}>
+              Create Post
+            </Button>
           </Box>
-          <Box >
+          <Box>
             {" "}
-            <Button color='inherit'>Log In</Button>
+            <Button
+              color='inherit'
+              onClick={() => {
+                history.push("/LogIn");
+              }}>
+              Log In
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
