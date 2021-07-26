@@ -3,6 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { Box } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import Story from "../Story/Story";
+// import { useState } from "react";
+import { useHistory } from "react-router";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function BasicTextFields() {
+  //   const [value, setValue] = React.useState("");
+  let history = useHistory();
   const classes = useStyles();
   const styles = {
     marginLeft: "400px",
@@ -22,7 +28,7 @@ export default function BasicTextFields() {
   return (
     <form className={classes.root} noValidate autoComplete='off'>
       <Box component='div' style={styles}>
-        <Box component='h1'>Log In</Box>
+        <Box component='h1'>Log In </Box>
         <TextField
           id='standard-basic'
           label='Name*'
@@ -35,7 +41,13 @@ export default function BasicTextFields() {
         />
         <Box component='div' mt={5}>
           {" "}
-          <Button variant='contained' color='primary' style={{width:"500px"}}>
+          <Button
+            variant='contained'
+            color='primary'
+            style={{ width: "500px" }}
+            onClick={() => {
+              history.push("../story");
+            }}>
             Log In
           </Button>
         </Box>

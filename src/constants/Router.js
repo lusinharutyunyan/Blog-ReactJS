@@ -6,6 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import Story from "../components/Story/Story";
 
 function Routers() {
   return (
@@ -17,6 +18,7 @@ function Routers() {
           path='/login'
           component={() => <LogIn authorized={true} />}
         />
+        <Route exact path='/story' component={Story} />
       </Switch>
       <Redirect from='/' to='/home' />
     </Router>

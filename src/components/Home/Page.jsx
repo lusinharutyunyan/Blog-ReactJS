@@ -21,9 +21,9 @@ export default function Page() {
           onClick={() => {
             history.push("/LogIn");
           }}>
-          Log in
-        </Link>
-        and be our first story teller.
+          Log in 
+        </Link> 
+         and be our first story teller.
       </Box>
     </Box>
   );
