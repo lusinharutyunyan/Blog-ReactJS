@@ -12,7 +12,7 @@ export default function LogOut({ authorized }) {
   };
 
   if (!authorized) {
-    return <Redirect to='/home' />;
+    return <Redirect to='/logout' />;
   }
   return (
     <div className='container'>
@@ -31,4 +31,4 @@ export default function LogOut({ authorized }) {
       </Box>
     </div>
   );
-} 
+}

@@ -65,7 +65,7 @@ export default function Header() {
             <Button
               color='inherit'
               onClick={() => {
-                history.push("/LogIn");
+                history.push("/logout");
               }}>
               Log Out
             </Button>

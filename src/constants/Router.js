@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Story from "../components/Story/Story";
 import Posts from "../components/Posts/Posts";
+import LogOut from "../components/LogOut/LogOut";
 
 function Routers() {
   return (
@@ -21,6 +22,11 @@ function Routers() {
         />
         <Route exact path='/story' component={Story} />
         <Route exact path='/posts' component={Posts} />
+        <Route
+          exact
+          path='/logout'
+          component={() => <LogOut authorized={true} />}
+        />
       </Switch>
       <Redirect from='/' to='/home' />
     </Router>
