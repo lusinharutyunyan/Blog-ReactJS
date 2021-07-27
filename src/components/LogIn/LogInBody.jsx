@@ -25,6 +25,13 @@ export default function BasicTextFields() {
   const styles = {
     marginLeft: "400px",
   };
+  const onSubmit = () => {
+    localStorage.setItem(
+      "auth",
+      JSON.stringify({ name: value, password: password })
+    );
+    history.push("../Posts");
+  };
 
   return (
     <form className={classes.root} noValidate autoComplete='off'>
@@ -52,7 +59,7 @@ export default function BasicTextFields() {
             style={{ width: "500px" }}
             disabled={!(value && password)}
             onClick={() => {
-              history.push("../Posts");
+              onSubmit();
             }}>
             Log In
           </Button>
