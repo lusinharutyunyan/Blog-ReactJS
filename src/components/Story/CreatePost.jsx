@@ -17,6 +17,11 @@ export default function CreatePost() {
     marginLeft: "400px",
     width: "600px",
   };
+
+const onSubmit = () => {
+  localStorage.setItem()
+}
+
   return (
     <div className='container'>
       <Box component='div' display='block' style={styles}>
@@ -41,8 +46,11 @@ export default function CreatePost() {
           variant='contained'
           color='primary'
           className={classes.button}
-          style={{ borderRadius: "20em",  }}
-          endIcon={<Icon>done</Icon>}></Button>
+          style={{ borderRadius: "20em" }}
+          endIcon={<Icon>done</Icon>}
+          onClick={() => {
+            onSubmit();
+          }}></Button>
       </Box>
     </div>
   );

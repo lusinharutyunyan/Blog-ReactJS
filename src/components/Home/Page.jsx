@@ -16,14 +16,17 @@ export default function Page() {
         There is no post on web-site.
       </Box>
       <Box component='h1' display='block'>
+
         <Link
           to='/LogIn.jsx'
+          
           onClick={() => {
             history.push("/LogIn");
           }}>
-          Log in 
-        </Link> 
-         and be our first story teller.
+          Log in {" "}
+        </Link>
+        
+            and be our first story teller.
       </Box>
     </Box>
   );

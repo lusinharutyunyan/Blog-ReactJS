@@ -49,6 +49,7 @@ export default function BasicTextFields() {
           label='Password*'
           style={{ width: "500px" }}
           value={password}
+          type='password'
           onChange={(e) => setPassword(e.target.value)}
         />
         <Box component='div' mt={5}>
