@@ -4,7 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import { Box } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Story from "../Story/Story";
-// import { useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function BasicTextFields() {
-  //   const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
   let history = useHistory();
   const classes = useStyles();
   const styles = {
@@ -32,11 +34,15 @@ export default function BasicTextFields() {
           id='standard-basic'
           label='Name*'
           style={{ width: "500px" }}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
         <TextField
           id='standard-basic'
           label='Password*'
           style={{ width: "500px" }}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <Box component='div' mt={5}>
           {" "}
@@ -44,6 +50,7 @@ export default function BasicTextFields() {
             variant='contained'
             color='primary'
             style={{ width: "500px" }}
+            disabled={!(value && password)}
             onClick={() => {
               history.push("../Posts");
             }}>

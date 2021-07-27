@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@material-ui/core";
-import ButtonAppBar from "../Home/Header";
 import CreatePost from "./CreatePost";
+import Header from "../Posts/HeaderPosts";
 
 export default function Story() {
   return (
     <div>
-      <ButtonAppBar />
+      <Header />
       <CreatePost />
     </div>
   );
