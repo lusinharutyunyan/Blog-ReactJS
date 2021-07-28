@@ -30,7 +30,7 @@ export default function BasicTextFields() {
       "auth",
       JSON.stringify({ name: value, password: password })
     );
-    history.push("../Posts");
+    history.push("../Story");
   };
 
   return (
