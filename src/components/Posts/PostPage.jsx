@@ -54,7 +54,7 @@ export default function YourPost({ data }) {
   return (
     <Box component='div' style={posts}>
       <Box component='div' style={titles}>
-        <Box component='div'>
+        <Box component='div' style={{marginTop:"19px"}}>
           <Box component='div' style={round}>
             {data.name.charAt(0).toUpperCase()}
           </Box>
