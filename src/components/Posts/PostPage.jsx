@@ -45,7 +45,8 @@ export default function YourPost({ data }) {
     display:"flex",
     justifyContent:"center",
     alignItems:"center",
-    fontSize:"20px"
+    fontSize:"20px",
+    lineHeight:"40px"
 
   };
   const date = ("" + new Date()).substr(4, 11);
@@ -60,7 +61,7 @@ export default function YourPost({ data }) {
         </Box>
         <Box component='div' style={texts}>
           <Box component='h4'>{data.title}</Box>
-          <Box component='span' style={{ color: "lightgray" }}>
+          <Box component='span' style={{ color: "lightgray", marginTop:"-20px" }}>
             {date} by {data.name}
           </Box>
         </Box>
