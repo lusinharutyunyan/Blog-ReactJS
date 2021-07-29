@@ -15,7 +15,8 @@ export default function AllPosts({ data }) {
    };
   return (
   
-    <Box component='div' style={styles}>    <Header/>
+    <Box component='div' style={styles}> 
+       <Header />
       <Box component='h2'>There is no post on web-site</Box>
       <Box component='h1'>
         You have logged in,{" "}

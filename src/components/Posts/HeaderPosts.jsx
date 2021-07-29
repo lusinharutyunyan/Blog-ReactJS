@@ -9,6 +9,7 @@ import HouseIcon from "@material-ui/icons/House";
 import Box from "@material-ui/core/Box";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
+import AllPosts from "./AllPosts";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,7 +43,7 @@ export default function Header() {
             <Link
               style={{ color: "white" }}
               onClick={() => {
-                history.push("/home");
+                history.push("/AllPosts");
               }}>
               Blog
             </Link>
