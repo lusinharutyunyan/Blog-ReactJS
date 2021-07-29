@@ -8,7 +8,7 @@ export default function Posts() {
     : [];
 
   const myPosts = data.map((item) => {
-    return <YourPost data={item} />;
+    return <YourPost data={item} /> ;
   });
   return (
     <div>

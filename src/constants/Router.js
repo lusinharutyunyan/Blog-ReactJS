@@ -9,6 +9,7 @@ import {
 import Story from "../components/Story/Story";
 import Posts from "../components/Posts/Posts";
 import LogOut from "../components/LogOut/LogOut";
+import AllPosts from "../components/Posts/AllPosts";
 
 function Routers() {
   return (
@@ -27,6 +28,7 @@ function Routers() {
           path='/logout'
           component={() => <LogOut authorized={true} />}
         />
+        <Route exact path ="/AllPosts" component={AllPosts} />
       </Switch>
       <Redirect from='/' to='/home' />
     </Router>

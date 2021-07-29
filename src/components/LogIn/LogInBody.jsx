@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Story from "../Story/Story";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import AllPosts from "../Posts/AllPosts";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +31,7 @@ export default function BasicTextFields() {
       "auth",
       JSON.stringify({ name: value, password: password })
     );
-    history.push("../Story");
+    history.push("../AllPosts");
   };
 
   return (

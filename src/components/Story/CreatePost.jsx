@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import AllPosts from "../Posts/AllPosts";
 
 const useStyles = makeStyles((theme) => ({
   button: {

@@ -60,6 +60,7 @@ export default function Header() {
               Create Post
             </Button>
           </Box>
+          
           <Box>
             {" "}
             <Button
