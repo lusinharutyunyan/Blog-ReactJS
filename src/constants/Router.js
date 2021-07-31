@@ -10,6 +10,8 @@ import Story from "../components/Story/Story";
 import Posts from "../components/Posts/Posts";
 import LogOut from "../components/LogOut/LogOut";
 import AllPosts from "../components/Posts/AllPosts";
+import Edit from "../components/EditPost/EditPost";
+
 
 function Routers() {
   return (
@@ -29,6 +31,7 @@ function Routers() {
           component={() => <LogOut authorized={true} />}
         />
         <Route exact path ="/AllPosts" component={AllPosts} />
+        <Route exact path='/edit' component={Edit}/>
       </Switch>
       <Redirect from='/' to='/home' />
     </Router>

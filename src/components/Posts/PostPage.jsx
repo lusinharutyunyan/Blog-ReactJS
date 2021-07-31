@@ -40,34 +40,41 @@ export default function YourPost({ data }) {
     height: "40px",
     backgroundColor: "crimson",
     borderRadius: "50%",
-    color:"white",
-    display:"flex",
-    justifyContent:"center",
-    alignItems:"center",
-    fontSize:"20px",
-    lineHeight:"40px"
-
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "20px",
+    lineHeight: "40px",
   };
   const date = ("" + new Date()).substr(4, 11);
 
   return (
     <Box component='div' style={posts}>
       <Box component='div' style={titles}>
-        <Box component='div' style={{marginTop:"19px"}}>
+        <Box component='div' style={{ marginTop: "19px" }}>
           <Box component='div' style={round}>
             {data.name.charAt(0).toUpperCase()}
           </Box>
         </Box>
         <Box component='div' style={texts}>
           <Box component='h4'>{data.title}</Box>
-          <Box component='span' style={{ color: "lightgray", marginTop:"-20px" }}>
+          <Box
+            component='span'
+            style={{ color: "lightgray", marginTop: "-20px" }}>
             {date} by {data.name}
           </Box>
         </Box>
       </Box>
 
       <Box component='p'>{data.content}...</Box>
-      <Button style={btnStyle}>LEARN MORE</Button>
+      <Button
+        style={btnStyle}
+        onClick={() => {
+          history.push("/Edit");
+        }}>
+        LEARN MORE
+      </Button>
     </Box>
   );
 }
